@@ -13,6 +13,5 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class LeeAdminApplication {
     public static void main(String[] args) {
         SpringApplication.run(LeeAdminApplication.class, args);
-
     }
 }
