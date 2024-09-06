@@ -12,6 +12,8 @@
   <modules>
     <module>Lee-admin</module>
     <module>Lee-common</module>
+    <module>Lee-serviceApi</module>
+    <module>Lee-entity</module>
   </modules>
 
   <properties>
@@ -36,6 +38,7 @@
     <spring.boot.starter.web>3.3.2</spring.boot.starter.web>
     <mybatis.plus.extension>3.4.1</mybatis.plus.extension>
     <easyexcel.core>3.3.3</easyexcel.core>
+    <Lee.entity>1.0-SNAPSHOT</Lee.entity>
   </properties>
 
   <!-- 依赖声明 -->
@@ -83,6 +86,12 @@
         <artifactId>easyexcel-core</artifactId>
         <version>${easyexcel.core}</version>
       </dependency>
+
+<!--      <dependency>-->
+<!--        <groupId>org.example</groupId>-->
+<!--        <artifactId>Lee-entity</artifactId>-->
+<!--        <version>${Lee.entity}</version>-->
+<!--      </dependency>-->
 
       <dependency>
         <groupId>com.baomidou</groupId>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lee.wedding.api.mapper.UserMapper">
+
+    <resultMap type="lee.wedding.entity.userBO.User" id="UserResult">
+        <id     property="id"      column="config_id"      />
+        <result property="userName"    column="config_name"    />
+        <result property="userPassword"     column="config_key"     />
+        <result property="userEmail"   column="config_value"   />
+        <result property="userCard"    column="config_type"    />
+        <result property="userPhoneCode"      column="create_by"      />
+        <result property="fullName"      column="create_by"      />
+        <result property="createTime"    column="create_time"    />
+        <result property="isDelete"    column="create_time"    />
+        <result property="userStatus"      column="update_by"      />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+    <sql id="selectUserVo">
+        SELECT id, user_name, user_password, full_user, user_email, user_phone_code, user_card, is_delete, user_status, create_time, update_time FROM lee_user
+    </sql>
+
+    <select id="selectUserAll" parameterMap="User" resultMap="UserResult">
+        <include refid="selectUserVo" />
+        WHERE is_delete != 1
+    </select>
+
+</mapper>

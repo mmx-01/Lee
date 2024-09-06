@@ -7,10 +7,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>Lee-common</artifactId>
+    <artifactId>Lee-entity</artifactId>
     <packaging>jar</packaging>
 
-    <name>Lee-common</name>
+    <name>Lee-entity</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -82,7 +82,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>

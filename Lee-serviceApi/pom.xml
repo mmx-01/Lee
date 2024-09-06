@@ -7,10 +7,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>Lee-common</artifactId>
+    <artifactId>Lee-serviceApi</artifactId>
     <packaging>jar</packaging>
 
-    <name>Lee-common</name>
+    <name>Lee-serviceApi</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -44,6 +44,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>Lee-entity</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+<!--        项目实体包-->
+<!--        <dependency>-->
+<!--            <groupId>org.example</groupId>-->
+<!--            <artifactId>Lee-entity</artifactId>-->
+<!--            <version>1.0-SNAPSHOT</version>-->
+<!--        </dependency>-->
 
         <!-- swagger3-->
         <dependency>
@@ -82,7 +95,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>Lee-entity</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
