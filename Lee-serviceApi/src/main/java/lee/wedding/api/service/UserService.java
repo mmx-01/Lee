@@ -1,6 +1,7 @@
 package lee.wedding.api.service;
 
-import lee.wedding.entity.userBO.User;
+
+import lee.wedding.api.bo.User;
 
 import java.util.List;
 

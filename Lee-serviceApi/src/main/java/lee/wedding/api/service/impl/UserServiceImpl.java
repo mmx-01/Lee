@@ -1,8 +1,9 @@
 package lee.wedding.api.service.impl;
 
+import lee.wedding.api.bo.User;
 import lee.wedding.api.mapper.UserMapper;
 import lee.wedding.api.service.UserService;
-import lee.wedding.entity.userBO.User;
+//import lee.wedding.entity.userBO.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

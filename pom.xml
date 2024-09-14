@@ -8,7 +8,6 @@
   <packaging>pom</packaging>
 
   <name>Lee-wedding</name>
-<!--  <url>http://maven.apache.org</url>-->
   <modules>
     <module>Lee-admin</module>
     <module>Lee-common</module>
@@ -17,7 +16,7 @@
   </modules>
 
   <properties>
-<!--    <ruoyi.version>3.8.8</ruoyi.version>-->
+    <Lee.version>1.0-SNAPSHOT</Lee.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>17</java.version>
@@ -35,10 +34,6 @@
     <poi.version>4.1.2</poi.version>
     <velocity.version>2.3</velocity.version>
     <jwt.version>0.9.1</jwt.version>
-    <spring.boot.starter.web>3.3.2</spring.boot.starter.web>
-    <mybatis.plus.extension>3.4.1</mybatis.plus.extension>
-    <easyexcel.core>3.3.3</easyexcel.core>
-    <Lee.entity>1.0-SNAPSHOT</Lee.entity>
   </properties>
 
   <!-- 依赖声明 -->
@@ -72,31 +67,38 @@
         <scope>import</scope>
       </dependency>
 
+      <!-- 阿里数据库连接池 -->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid-spring-boot-starter</artifactId>
+        <version>${druid.version}</version>
+      </dependency>
 
-      <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
-        <version>${spring.boot.starter.web}</version>
-<!--        <version>3.3.2</version>-->
+        <version>3.3.2</version>
       </dependency>
 
+      <!-- 解析客户端操作系统、浏览器等 -->
       <dependency>
-        <groupId>com.alibaba</groupId>
-        <artifactId>easyexcel-core</artifactId>
-        <version>${easyexcel.core}</version>
+        <groupId>eu.bitwalker</groupId>
+        <artifactId>UserAgentUtils</artifactId>
+        <version>${bitwalker.version}</version>
       </dependency>
 
-<!--      <dependency>-->
-<!--        <groupId>org.example</groupId>-->
-<!--        <artifactId>Lee-entity</artifactId>-->
-<!--        <version>${Lee.entity}</version>-->
-<!--      </dependency>-->
-
+      <!-- pagehelper 分页插件 -->
       <dependency>
-        <groupId>com.baomidou</groupId>
-        <artifactId>mybatis-plus-extension</artifactId>
-        <version>${mybatis.plus.extension}</version>
+        <groupId>com.github.pagehelper</groupId>
+        <artifactId>pagehelper-spring-boot-starter</artifactId>
+        <version>${pagehelper.boot.version}</version>
+      </dependency>
+
+      <!-- 获取系统信息 -->
+      <dependency>
+        <groupId>com.github.oshi</groupId>
+        <artifactId>oshi-core</artifactId>
+        <version>${oshi.version}</version>
       </dependency>
 
       <!-- Swagger3依赖 -->
@@ -120,15 +122,18 @@
       </dependency>
 
       <!-- excel工具 -->
-      <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
       <dependency>
         <groupId>org.apache.poi</groupId>
         <artifactId>poi-ooxml</artifactId>
         <version>${poi.version}</version>
       </dependency>
 
-
-
+      <!-- velocity代码生成使用模板 -->
+      <dependency>
+        <groupId>org.apache.velocity</groupId>
+        <artifactId>velocity-engine-core</artifactId>
+        <version>${velocity.version}</version>
+      </dependency>
 
       <!-- 阿里JSON解析器 -->
       <dependency>
@@ -151,59 +156,38 @@
         <version>${kaptcha.version}</version>
       </dependency>
 
-<!--      &lt;!&ndash; 定时任务&ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>com.ruoyi</groupId>-->
-<!--        <artifactId>ruoyi-quartz</artifactId>-->
-<!--        <version>${ruoyi.version}</version>-->
-<!--      </dependency>-->
+      <!-- 主程序入库 Controller-->
+      <dependency>
+        <groupId>org.example</groupId>
+        <artifactId>Lee-admin</artifactId>
+        <version>${Lee.version}</version>
+      </dependency>
 
-<!--      &lt;!&ndash; 代码生成&ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>com.ruoyi</groupId>-->
-<!--        <artifactId>ruoyi-generator</artifactId>-->
-<!--        <version>${ruoyi.version}</version>-->
-<!--      </dependency>-->
+      <!-- 通用工具-->
+      <dependency>
+        <groupId>org.example</groupId>
+        <artifactId>Lee-common</artifactId>
+        <version>${Lee.version}</version>
+      </dependency>
 
-<!--      &lt;!&ndash; 核心模块&ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>com.ruoyi</groupId>-->
-<!--        <artifactId>ruoyi-framework</artifactId>-->
-<!--        <version>${ruoyi.version}</version>-->
-<!--      </dependency>-->
+      <!-- 实体中心-->
+      <dependency>
+        <groupId>org.example</groupId>
+        <artifactId>Lee-entity</artifactId>
+        <version>${Lee.version}</version>
+      </dependency>
 
-      <!-- 系统模块-->
-<!--      <dependency>-->
-<!--        <groupId>com.ruoyi</groupId>-->
-<!--        <artifactId>ruoyi-system</artifactId>-->
-<!--        <version>${ruoyi.version}</version>-->
-<!--      </dependency>-->
-
-<!--      &lt;!&ndash; 通用工具&ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>com.ruoyi</groupId>-->
-<!--        <artifactId>ruoyi-common</artifactId>-->
-<!--        <version>${ruoyi.version}</version>-->
-<!--      </dependency>-->
+      <!-- 服务模块-->
+      <dependency>
+        <groupId>org.example</groupId>
+        <artifactId>Lee-serviceApi</artifactId>
+        <version>${Lee.version}</version>
+      </dependency>
 
     </dependencies>
   </dependencyManagement>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
-        <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
-          <encoding>${project.build.sourceEncoding}</encoding>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-
+<!--  从阿里云的公共仓库获取依赖-->
   <repositories>
     <repository>
       <id>public</id>

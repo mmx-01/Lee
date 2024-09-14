@@ -4,14 +4,11 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import lee.wedding.api.service.UserService;
 import lee.wedding.common.utils.LeeWebbingResult;
-import lee.wedding.entity.userBO.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * @ ClassName UserController
@@ -20,7 +17,7 @@ import java.util.List;
  * @ Date 2024/9/5 14:18
  **/
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/admin/user")
 public class UserController {
 
     @Autowired
@@ -35,7 +32,7 @@ public class UserController {
             @ApiImplicitParam(name = "userStatus", dataType = "int", paramType = "query", value = "用户状态", required = false, defaultValue = "")
 
     })
-    public LeeWebbingResult<List<User>> getUsers(
+    public LeeWebbingResult getUsers(
             @RequestParam(value = "pageNo", required = false, defaultValue = "1") Integer pageNo,
             @RequestParam(value = "pageSize", required = false, defaultValue = "10") Integer pageSize,
             @RequestParam(value = "userName", required = false) String userName,
@@ -43,5 +40,6 @@ public class UserController {
             @RequestParam(value = "userStatus", required = false) Integer userStatus)
     {
         return LeeWebbingResult.success(userService.getAllUsers());
+//        return "";
     }
 }

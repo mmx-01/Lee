@@ -1,6 +1,6 @@
 package lee.wedding.common.utils;
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+//import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
 import java.util.List;
 
@@ -21,17 +21,17 @@ public class PageUtils {
      * @param <T> 数据类型
      * @return 返回分页结果
     */
-    public static <T> Page<T> getPage(List<T> list, Page<T> pageEntity){
-        long pageNo = pageEntity.getCurrent();
-        long pageSize = pageEntity.getSize();
-        long start = (pageNo - 1) * pageSize;
-        long end = Math.min(start + pageSize, list.size());
-        if (start > list.size()) {
-            start = list.size();
-        }
-        List<T> resultList = list.subList((int) start, (int) end);
-        Page<T> page = new Page<>(pageNo, pageSize, list.size());
-        pageEntity.setRecords(resultList);
-        return page;
-    }
+//    public static <T> Page<T> getPage(List<T> list, Page<T> pageEntity){
+//        long pageNo = pageEntity.getCurrent();
+//        long pageSize = pageEntity.getSize();
+//        long start = (pageNo - 1) * pageSize;
+//        long end = Math.min(start + pageSize, list.size());
+//        if (start > list.size()) {
+//            start = list.size();
+//        }
+//        List<T> resultList = list.subList((int) start, (int) end);
+//        Page<T> page = new Page<>(pageNo, pageSize, list.size());
+//        pageEntity.setRecords(resultList);
+//        return page;
+//    }
 }

@@ -6,6 +6,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       maximum-pool-size: 10
+#mybatis:
+#  mapper-locations: classpath:lee/wedding/api/mapper/*.xml
+#  type-aliases-package: lee.wedding.api.mapper.*
+#  configuration:
+#    map-underscore-to-camel-case: true
 
   servlet:
     multipart:

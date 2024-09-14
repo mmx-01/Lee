@@ -1,8 +1,8 @@
 package lee.wedding.api.mapper;
 
-//import lee.wedding.entity.userBO.User;
-import lee.wedding.entity.userBO.User;
+import lee.wedding.api.bo.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 @Mapper
