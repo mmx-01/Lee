@@ -36,8 +36,8 @@ public class UserController {
     @Value("${aliyun.model}")
     private String model;
 
-    @GetMapping("chatAi")
-    public LeeWebbingResult chatAi(@RequestParam("text") String text) throws NoApiKeyException, InputRequiredException {
+    @GetMapping("/chatAi")
+    public String chatAi(@RequestParam("text") String text) throws NoApiKeyException, InputRequiredException {
         Generation gen = new Generation();
         com.alibaba.dashscope.common.Message systemMsg = com.alibaba.dashscope.common.Message.builder()
                 .role(Role.SYSTEM.getValue())
@@ -66,6 +66,6 @@ public class UserController {
                 .getString("content");
 
 //        System.out.println(content);
-        return LeeWebbingResult.success(content);
+        return content;
     }
 }
