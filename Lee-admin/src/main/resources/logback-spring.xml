@@ -3,7 +3,7 @@
 
     <!-- 定义日志的输出格式 -->
     <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"/>
-    <property name="LOG_PATH" value="L:/logs"/>
+    <property name="LOG_PATH" value="/lee/mmx/logs/"/>
 
     <!-- ConsoleAppender 输出到控制台 -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">

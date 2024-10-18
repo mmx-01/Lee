@@ -12,12 +12,13 @@ import org.springframework.scheduling.annotation.EnableAsync;
  * @ Author Limj
  * @ Date 2024/9/4 18:11
  **/
-@SpringBootApplication(scanBasePackages = {"lee.wedding.api.service"})
+@SpringBootApplication
 @EnableAsync // 开启异步事务
 //@ComponentScan(basePackages = {})
-@MapperScan(basePackages = {"lee.wedding.api.*"})
+//@MapperScan(basePackages = {"lee.wedding.api.*"})
 public class LeeAdminApplication {
     public static void main(String[] args) {
+//        System.setProperty("java.net.preferIPv4Stack", "true");
         SpringApplication.run(LeeAdminApplication.class, args);
     }
 }

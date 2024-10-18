@@ -1,4 +1,4 @@
-package lee.wedding.common.utils;
+package lee.wedding.manage.utils;
 
 
 import lombok.Data;

@@ -38,6 +38,12 @@
             <version>2.3.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20210307</version> <!-- 确保使用最新版本 -->
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.alibaba/dashscope-sdk-java -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -80,23 +86,6 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-        <!-- 通用工具-->
-        <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>Lee-common</artifactId>
-        </dependency>
-
-        <!-- 实体中心-->
-        <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>Lee-entity</artifactId>
-        </dependency>
-
-        <!-- 服务模块-->
-        <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>Lee-serviceApi</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>junit</groupId>

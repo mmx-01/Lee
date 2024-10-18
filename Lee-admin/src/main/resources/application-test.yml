@@ -27,3 +27,7 @@ logging:
   level:
     root: INFO
     org.springframework.web: DEBUG
+
+aliyun:
+  apiKey: sk-f0fd0ce6fc904ab3848630035123ec50
+  model: qwen-max-latest
