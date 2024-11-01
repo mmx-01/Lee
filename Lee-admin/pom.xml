@@ -116,6 +116,41 @@
             <version>5.8.32</version>
         </dependency>
 
+<!--        <dependency>-->
+<!--            <groupId>org.wechaty</groupId>-->
+<!--            <artifactId>wechaty</artifactId>-->
+<!--            <version>0.61.2</version> &lt;!&ndash; 请检查最新版本 &ndash;&gt;-->
+<!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/com.jcraft/jsch -->
+<!--        远程执行linux命令-->
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>0.1.54</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.15.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version> <!-- 或者你需要的版本 -->
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-http</artifactId>
+            <version>5.8.12</version> <!-- 请检查最新版本 -->
+        </dependency>
+
+
+
 
         <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
         <dependency>
